@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/yourusername/simple-html-project.git', branch: 'master'
+                git credentialsId: 'github-pat', url: 'https://github.com/veeramogala/simple-html-project.git', branch: 'main'
             }
         }
         stage('Build') {
